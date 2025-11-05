@@ -54,7 +54,7 @@ tdata['Fare']=tdata['Fare'].fillna(tdata[tdata['Pclass']==3]['Fare'].median())
 
 predictions=model.predict(tdata.drop(columns=['PassengerId']))
 output=pd.DataFrame({'PassengerId':tdata['PassengerId'],'Survived':predictions})
-output.to_csv('submission.csv',index=False)
+#output.to_csv('submission.csv',index=False)
 print("Submission file created: submission.csv")
 
 
